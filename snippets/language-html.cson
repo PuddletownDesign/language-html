@@ -14,10 +14,10 @@
     'body': '<area${1: shape="${2:default}"} coords="$3"${4: href="${5:#}" alt="$6"}>$0'
   'Article':
     'prefix': 'article'
-    'body': '<article class="$1">\n\t$2\n</article>'
+    'body': '<article>\n\t$2\n</article>'
   'Aside':
     'prefix': 'aside'
-    'body': '<aside class="$1">\n\t$2\n</aside>'
+    'body': '<aside>\n\t$2\n</aside>'
   'Audio':
     'prefix': 'audio'
     'body': '<audio src="$1">\n\t$2\n</audio>'
@@ -25,9 +25,6 @@
   'Body':
     'prefix': 'body'
     'body': '<body>\n\t$1\n</body>'
-  'Bold':
-    'prefix': 'b'
-    'body': '<b>$1</b>$0'
   'Base':
     'prefix': 'base'
     'body': '<base href="${1:#}" target="${2:_blank}">$0'
@@ -157,13 +154,7 @@
   'Horizontal Rule':
     'prefix': 'hr'
     'body': '<hr>'
-  'HTML':
-    'prefix': 'html'
-    'body': '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset="utf-8">\n\t\t<title>$1</title>\n\t</head>\n\t<body>\n\t\t$2\n\t</body>\n</html>'
   # I
-  'Italic':
-    'prefix': 'i'
-    'body': '<i>$1</i>$0'
   'Inline Frame':
     'prefix': 'iframe'
     'body': '<iframe src="$1" width="$2" height="$3">$4</iframe>$0'
@@ -333,7 +324,20 @@
   # T
   'Table':
     'prefix': 'table'
-    'body': '<table>\n\t$1\n</table>'
+    'body': '''
+<table>
+	${1:<thead>
+		<tr>
+			<th scope='col'>$2</th>$0
+		</tr>
+	</thead>}
+	<tbody>
+		<tr>
+
+		</tr>
+	</tbody>
+</table>
+    '''
   'Table Body':
     'prefix': 'tbody'
     'body': '<tbody>\n\t$1\n</tbody>'
@@ -385,6 +389,155 @@
   'Word Break Opportunity':
     'prefix': 'wbr'
     'body': '<wbr>'
+
+# Custom Form elements
+## Html Snippets
+'.text.html':
+  'Javascript External':
+    'prefix': 'js'
+    'body': '<script src="$1.js" defer></script>$0'
+  'CSS External':
+    'prefix': 'css'
+    'body': '<link href="$1.css" rel="stylesheet">$0'
+  'Structure':
+    'prefix': 'html'
+    'body': """
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="stylesheet">
+        <title>$1</title>
+      </head>
+      <body>
+
+      $0
+
+      </body>
+      </html>
+    """
+  'Form Wrapper':
+    'prefix': 'form'
+    'body': '''
+<form action="${1:#}" method="${2:post}"${3: enctype="multipart/form-data"}>
+$0
+</form>
+    '''
+  'fieldset':
+    'prefix': 'fieldset'
+    'body': '''
+<fieldset>
+    $0
+</fieldset>
+    '''
+  'Option Group':
+    'prefix': 'optgroup'
+    'body': '''
+<optgroup label="$1">
+    $0
+</optgroup>
+    '''
+  'Option':
+    'prefix': 'option'
+    'body': '''
+<option value="${1:}">${1:}</option>
+$0
+    '''
+  'Radio Button':
+    'prefix': 'radio'
+    'body': '''
+<label for="$1">$2</label>
+<input type="radio" name="$1" id="$1" value="$2">$0
+    '''
+  'Text Input':
+    'prefix': 'text'
+    'body': '''
+<label for="$1">$1</label><br>
+<input type="text" name="$1" id="$1"${2: ${3:placeholder="$4"}} ${5: ${6:value="$7"}} ${8:required}>
+<br><br>
+
+$0
+    '''
+  'Submit Input':
+    'prefix': 'submit'
+    'body': '''
+<input type="submit" id="submit" value="${1:submit}">$0
+    '''
+  'Hidden Input':
+    'prefix': 'hidden'
+    'body': '''
+<input type="hidden" name="$1"${2: value="$3"}>$0
+    '''
+  'Input Password':
+    'prefix': 'password'
+    'body': '''
+<label for="password">Password</label><br>
+<input type="password" id="password" name="password"><br><br>
+$0
+   '''
+  'Input Checkbox':
+    'prefix': 'checkbox'
+    'body': '''
+<input type="checkbox" name="$1" id="$1">
+<label for="$1">$1</label>
+<br>
+$0
+  '''
+  'Input Radio Button':
+    'prefix': 'radio'
+    'body': '''
+<input type="radio" name="$2" id="$1" value="$2">
+<label for="$2">$2</label>
+<br>
+$0
+   '''
+   'Input Select Menu':
+     'prefix': 'select'
+     'body': '''
+<label for="$1">$1</label><br>
+<select name="$1" id="$1">
+    <option value="$2">$2</option>$0
+</select>
+<br><br>
+   '''
+  'Search Input':
+    'prefix': 'search'
+    'body': '''
+<label for="$1">$1</label><br>
+<input type="search" name="$1" id="$1" placeholder="$1" role="search">
+<br><br>
+
+$0
+    '''
+  'Email Input':
+    'prefix': 'email'
+    'body': '''
+<label for="email">Email Addess</label><br>
+<input type="email" name="email" placeholder="Email Address" ${1:required}>
+<br><br>
+
+$0
+    '''
+  'Input Phone':
+    'prefix': 'phone'
+    'body': '''
+<label for="tel">Telephone</label><br>
+<input type="tel" name="tel" ${1:required}>
+<br><br>
+
+$0
+    '''
+  'Input File':
+    'prefix': 'file'
+    'body': '''
+<label for="$1">$1</label><br>
+<input type="file" name="$1" id="$1"><br><br>
+$0
+    '''
+    'enocoding':
+      'prefix': 'Multipart form encoding'
+      'body': 'enctype="multipart/form-data"'
 
 
 # These null out the snippets so the snippets are not available when in a tag or

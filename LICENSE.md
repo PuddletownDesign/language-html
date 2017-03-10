@@ -1,3 +1,15 @@
+Copyright (c) 2017 Puddletown Design
+
+This package is a modified version of Github's 2014 port of the Textmate
+HTML bundle.
+
+Permission to copy, use, modify, sell and distribute this
+software is granted. This software is provided "as is" without
+express or implied warranty, and with no claim as to its
+suitability for any purpose.
+
+--------------------------------------------------------------------
+
 Copyright (c) 2014 GitHub Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -22,7 +34,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --------------------------------------------------------------------
 
 This package was derived from a TextMate bundle located at
-https://github.com/textmate/html.tmbundle and distributed under the following
+<https://github.com/textmate/html.tmbundle> and distributed under the following
 license, located in `README.mdown`:
 
 Permission to copy, use, modify, sell and distribute this
