@@ -6,7 +6,7 @@ describe 'HTML grammar', ->
 
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage('language-html')
+      atom.packages.activatePackage('puddletown-language-html')
 
     waitsForPromise ->
       atom.packages.activatePackage('language-coffee-script')
