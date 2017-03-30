@@ -9,11 +9,11 @@
     "homepage": "http://puddletowndesign.com",
     "repository": {
         "type": "git",
-        "url": "https://github.com/PuddletownDesign/language-html.git"
+        "url": "https://github.com/PuddletownDesign/puddletown-language-html.git"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/PuddletownDesign/language-html/issues"
+        "url": "https://github.com/PuddletownDesign/puddletown-language-html/issues"
     },
     "dependencies": {
         "atom-grammar-test": "^0.6.3"
