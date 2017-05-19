@@ -1,6 +1,6 @@
 {
   "name": "puddletown-language-html",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "description": "Puddletown Design modified HTML language support in Atom.",
   "engines": {
     "atom": "*",
