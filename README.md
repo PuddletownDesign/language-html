@@ -1,4 +1,7 @@
-# HTML language support in Atom
+# Puddletown HTML language support in Atom
+
+Fork of offical language HTML repo, with all of the snippets removed so that they can be implemented modularly.
+
 [![macOS Build Status](https://travis-ci.org/atom/language-html.svg?branch=master)](https://travis-ci.org/atom/language-html)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/t6pk6mmdgcelfg85/branch/master?svg=true)](https://ci.appveyor.com/project/Atom/language-html/branch/master)
 [![Dependency Status](https://david-dm.org/atom/language-html.svg)](https://david-dm.org/atom/language-html)
