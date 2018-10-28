@@ -1,14 +1,7 @@
 {
-<<<<<<< HEAD
   "name": "puddletown-language-html",
   "version": "1.0.1",
   "description": "Puddletown Design modified HTML language support in Atom.",
-=======
-  "name": "language-html",
-  "main": "lib/main",
-  "version": "0.51.5",
-  "description": "HTML language support in Atom",
->>>>>>> upstream/master
   "engines": {
     "atom": "*",
     "node": "*"
@@ -23,9 +16,7 @@
     "url": "https://github.com/PuddletownDesign/puddletown-language-html/issues"
   },
   "dependencies": {
-    "atom-grammar-test": "^0.6.3",
-    "tree-sitter-html": "^0.13.2",
-    "tree-sitter-embedded-template": "^0.13.0"
+    "atom-grammar-test": "^0.6.3"
   },
   "devDependencies": {
     "coffeelint": "^1.10.1"
