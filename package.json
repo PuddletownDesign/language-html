@@ -1,14 +1,8 @@
 {
-<<<<<<< HEAD
   "name": "puddletown-language-html",
   "version": "1.0.1",
-  "description": "Puddletown Design modified HTML language support in Atom.",
-=======
-  "name": "language-html",
   "main": "lib/main",
-  "version": "0.51.5",
-  "description": "HTML language support in Atom",
->>>>>>> upstream/master
+  "description": "Puddletown Design modified HTML language support in Atom.",
   "engines": {
     "atom": "*",
     "node": "*"
